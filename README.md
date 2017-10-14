@@ -3,6 +3,7 @@
 
 ## Overview
 This app has three fields of responsibility:
+
 * User management
 * User authentication
 * Session management
