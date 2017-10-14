@@ -1,5 +1,5 @@
 # Authenticator
-##### Maintainer: qtomerr@gmail.com
+##### Maintainer: [Tomer Raz](qtomerr@gmail.com)
 
 ## Overview
 This app has three fields of responsibility:
