@@ -1,8 +1,7 @@
-name := "authenticator"
+name := "sample-akka-http-authenticator"
 organization := "com.qtomerr"
 version := "0.0.1"
 description := "Generic authentication server for user management and session instantiation"
-
 
 // Scala version limited due to Quill support: https://github.com/getquill/quill/pull/617
 scalaVersion := "2.11.8"

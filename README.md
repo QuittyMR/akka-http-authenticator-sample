@@ -1,4 +1,4 @@
-# Authenticator
+# Scala / Akka-http authenticator sample
 ##### Maintainer: [Tomer Raz](qtomerr@gmail.com)
 
 ## Overview
@@ -8,18 +8,23 @@ This app has three fields of responsibility:
 * User authentication
 * Session management
 
-It has no CORS support, is not user-serviceable and is only meant to be
+It has no CORS support, and is only meant to be
  accessed by a "sponsor" application, which should also handle permission checking.
+ Users should not interact with the authenticator directly.
 
 ## Usage
 
+Think about the authenticator as a loosely-coupled authentication module.
+Upon successful authentication, the authenticator will generate a session entry in the configured volatile storage
+and return the key to the sponsor app.
+
 It is the sponsor app's responsibility to load permissions unto the
 session created by the authenticator, as well as return the session ID
-in cookie format.
+in cookie format so that it is represented on the client-side.
 
 Upon attempting to access a protected resource, the sponsor app should
 access the volatile storage directly, pull all permissions under the
-user's session ID and proceed accordingly.
+user's session ID and proceed accordingly. 
 
 ## Routes
 

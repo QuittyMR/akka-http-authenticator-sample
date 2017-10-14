@@ -76,7 +76,7 @@ trait Router {
                         }
                     } ~
                     path("get" / Remaining) { userName =>
-                        // Get particular user by username
+                        // Get specific user by username
                         onSuccess(core ? UserRequest(Some(userName))) {
                             case response: Persistence.Users =>
                                 complete(response)
@@ -87,7 +87,7 @@ trait Router {
                 } ~
                 post {
                     path("create") {
-                        // Create new user
+                        // Create a new user
                         entity(as[NewUserRequest]) { newUserRequest =>
                             onSuccess(core ? newUserRequest) {
                                 case response: String =>
@@ -102,7 +102,7 @@ trait Router {
                         }
                     } ~
                     path("update") {
-                        // Update existing user
+                        // Update an existing user
                         entity(as[UpdateUserRequest]) { updateUserRequest =>
                             onSuccess(core ? updateUserRequest) {
                                 case response: String =>

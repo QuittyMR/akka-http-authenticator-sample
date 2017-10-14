@@ -1,5 +1,5 @@
 FROM docker.repo:5000/scala-alpine:2.11.8
-MAINTAINER tomer <qtomerr@gmail.com>
+MAINTAINER Tomer Raz <qtomerr@gmail.com>
 
 ENV APP_NAME authenticator
 ENV APP_HOME /opt/authenticator

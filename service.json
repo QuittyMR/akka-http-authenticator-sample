@@ -4,7 +4,7 @@
     "metadata": {
         "labels": {
             "app": "authenticator",
-            "version": "1.0.1"
+            "version": "1.0.0"
         },
         "name": "authenticator",
         "namespace": "mac-services"
@@ -21,7 +21,7 @@
         ],
         "selector": {
             "app": "authenticator",
-            "version": "1.0.1"
+            "version": "1.0.0"
         },
         "sessionAffinity": "None",
         "type": "LoadBalancer"
